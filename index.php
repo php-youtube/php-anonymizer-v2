@@ -157,7 +157,6 @@ foreach ($_HEADER as $key => $val) {
 			}
 			$location = 'http://'.str_replace(['https', 'http'], ['ssl', 'tcp'], $url['scheme']).'.'.$url['host'].$_URL['domain'].$url['path'].$url['query'];
 		}
-		$location = str_replace('1.vk.com', 'ssl.m.vk.com', $location);
 		header($key.': '.$location);
 	}
 	else {
